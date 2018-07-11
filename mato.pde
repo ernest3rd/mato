@@ -150,7 +150,7 @@ void reset(){
   velocity.rotate(random(10));
   dead = false;
   score = 0;
-  len = 4000;
+  len = 40;
   addUIBar();
   addApple();
 }
