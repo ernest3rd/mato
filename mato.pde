@@ -150,7 +150,7 @@ void reset(){
   velocity.rotate(random(10));
   dead = false;
   score = 0;
-  len = 40;
+  len = 4000;
   addUIBar();
   addApple();
 }
@@ -269,7 +269,9 @@ void drawCircle(int x, int y, int csize, int c){
 }
 
 void keyPressed(){
-  isKeyDown[keyCode] = true;
+  if(keyCode < 100){
+    isKeyDown[keyCode] = true;
+  }
 }
 
 void keyReleased(){
