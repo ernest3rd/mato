@@ -19,7 +19,7 @@ final int SNAKE_ADDR = 100;
 PFont f18, f24, f40;
 
 void setup(){
-  size(800,600);
+  size(800,500);
   frameRate(60);
   
   canvas = new int[width*height];
@@ -275,8 +275,10 @@ void keyPressed(){
 }
 
 void keyReleased(){
-  isKeyDown[keyCode] = false;
-  if(dead && keyCode==32){
-    reset();
+  if(keyCode < 100){
+    isKeyDown[keyCode] = false;
+    if(dead && keyCode==32){
+      reset();
+    }
   }
 }
